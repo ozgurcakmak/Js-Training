@@ -11,6 +11,11 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number!';
     score = 20;
+    // Manipulating CSS styles!
+    // We want to change the bg color when the player wins
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    // Make the number wider
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess >= secretNumber) {
     document.querySelector('.message').textContent = 'Too high!';
     score--;
@@ -22,6 +27,4 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-document.querySelector('.again').addEventListener('click', function () {
-  console.log('test');
-});
+document.querySelector('.again').addEventListener('click', function () {});
